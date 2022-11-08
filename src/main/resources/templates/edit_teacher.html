@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Student Management System</a>
+  <a class="navbar-brand" href="#">Teacher Management System</a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -24,7 +24,6 @@
       <li class="nav-item">
         <a class="nav-link" th:href="@{/students}">Student Management</a>
       </li>
-
       <li class="nav-item">
         <a class="nav-link" th:href="@{/teachers}">Teacher Management</a>
       </li>
@@ -36,39 +35,39 @@
 <div class = "container">
   <div class = "row">
     <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-      <h1 class = "text-center"> Update Student </h1>
+      <h1 class = "text-center"> Update Teacher </h1>
       <div class = "card-body">
-        <form th:action="@{/students/{id} (id=${student.id})}" th:object = "${student}" method="POST">
+        <form th:action="@{/teacher/{id} (id=${teacher.id})}" th:object = "${teacher}" method="POST">
           <div class ="form-group">
-            <label> Student First Name </label>
+            <label> Teacher First Name </label>
             <input
                     type = "text"
                     name = "firstName"
                     th:field = "*{firstName}"
                     class = "form-control"
-                    placeholder="Enter Student First Name"
+                    placeholder="Enter Teacher First Name"
             />
           </div>
 
           <div class ="form-group">
-            <label> Student Last Name </label>
+            <label> Teacher Last Name </label>
             <input
                     type = "text"
                     name = "lastName"
                     th:field = "*{lastName}"
                     class = "form-control"
-                    placeholder="Enter Student Last Name"
+                    placeholder="Enter Teacher Last Name"
             />
           </div>
 
           <div class ="form-group">
-            <label> Student Email </label>
+            <label> Teacher Email </label>
             <input
                     type = "text"
                     name = "email"
                     th:field = "*{email}"
                     class = "form-control"
-                    placeholder="Enter Student Email"
+                    placeholder="Enter Teacher Email"
             />
           </div>
 

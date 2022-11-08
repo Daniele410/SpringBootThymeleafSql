@@ -9,8 +9,10 @@ import java.util.List;
 
 @Service
 public class StudentServiceImpl implements IStudentService {
+
+
     @Autowired
-    StudentRepository studentRepository;
+    private StudentRepository studentRepository;
 
     @Override
     public List<Student> getAllStudents() {
@@ -20,5 +22,20 @@ public class StudentServiceImpl implements IStudentService {
     @Override
     public Student saveStudent(Student student) {
         return studentRepository.save(student);
+    }
+
+    @Override
+    public Student getStudentById(Long id) {
+        return studentRepository.findById(id).get();
+    }
+
+    @Override
+    public Student updateStudent(Student student) {
+        return studentRepository.save(student);
+    }
+
+    @Override
+    public void deleteStudentById(Long id) {
+        studentRepository.deleteById(id);
     }
 }
